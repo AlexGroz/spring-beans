@@ -17,6 +17,6 @@ public class JavaConfigController {
 
     @GetMapping("/java")
     public String hello(){
-
+        return javaConfigService.hello();
     }
 }
