@@ -15,6 +15,11 @@ public class JavaConfig {
         JavaConfigService javaConfigService = new JavaConfigService(offsetDateTime.toString());
         javaConfigService.setDayOfMonth(offsetDateTime.getDayOfMonth());
         return javaConfigService;
+    }
 
+    @Bean
+    public JavaConfigService javaConfigService1(){
+        OffsetDateTime offsetDateTime = OffsetDateTime.now();
+        return new JavaConfigService(offsetDateTime.toString());
     }
 }
