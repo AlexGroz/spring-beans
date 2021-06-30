@@ -3,6 +3,7 @@ package com.javastart.springbeans.config;
 import com.javastart.springbeans.service.JavaConfigService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import java.time.OffsetDateTime;
 
@@ -18,6 +19,7 @@ public class JavaConfig {
     }
 
     @Bean("PureJavaConfigService")
+    @Primary
     public JavaConfigService javaConfigService1(){
         OffsetDateTime offsetDateTime = OffsetDateTime.now();
         return new JavaConfigService(offsetDateTime.toString());

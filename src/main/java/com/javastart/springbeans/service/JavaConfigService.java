@@ -12,7 +12,7 @@ public class JavaConfigService {
 
     public String hello() {
         return "Hello from java config!" + " time: " + timeOfInitialization
-                + " dayOfMonth" + dayOfMonth;
+                + " dayOfMonth: " + dayOfMonth;
     }
 
     public void setDayOfMonth(Integer dayOfMonth) {
