@@ -9,7 +9,7 @@ import java.time.OffsetDateTime;
 @Configuration
 public class JavaConfig {
 
-    @Bean
+    @Bean("FullJavaConfigService")
     public JavaConfigService javaConfigService(){
         OffsetDateTime offsetDateTime = OffsetDateTime.now();
         JavaConfigService javaConfigService = new JavaConfigService(offsetDateTime.toString());
@@ -17,7 +17,7 @@ public class JavaConfig {
         return javaConfigService;
     }
 
-    @Bean
+    @Bean("PureJavaConfigService")
     public JavaConfigService javaConfigService1(){
         OffsetDateTime offsetDateTime = OffsetDateTime.now();
         return new JavaConfigService(offsetDateTime.toString());
